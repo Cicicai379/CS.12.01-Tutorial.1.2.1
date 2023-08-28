@@ -30,19 +30,14 @@ public class StepTracker {
     }
 
 
-
     public double averageSteps(){
-        if (days==0) {
-            return 0.0;
-        }
-        return (double) totalSteps / days;
+        if (days==0) return 0.0;
+        return (double) totalSteps/days;
     }
 
     public void addDailySteps(int s){
         days++;
-        totalSteps += s;
-        if (s >= minActive) {
-            activeDays++;
-        }
+        totalSteps+=s;
+        if (s> minActive) activeDays++;
     }
 }
